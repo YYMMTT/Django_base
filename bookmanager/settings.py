@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yh_e+lx3@8xc$o6p-)344**+&3)c==$4j83_dxl_!e@te%^dh#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#上线会改成False
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#运行什么样的形式来访问我们的项目  默认127.0.0.1
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,6 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#告知系统，图片在哪
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

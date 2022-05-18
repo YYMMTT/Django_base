@@ -18,4 +18,4 @@ def index(request):
     content={
         'name':'马上端午了啊啊啊啊啊'
     }
-    return render(request,'book/index.html',content=content)
+    return render(request,'book/index.html',content)
