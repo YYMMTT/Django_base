@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import pymysql
+
+pymysql.version_info = (1, 4, 13, "final", 0)
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,8 +86,13 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 #sqlite3也是关系型数据库
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql', #数据库
+        'HOST': '127.0.0.1',#主机
+        'PORT': 3306,
+        'USER': 'root',
+        'PASSWORD': 'test123456',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
