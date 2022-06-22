@@ -13,6 +13,8 @@ import os
 from pathlib import Path
 import pymysql
 
+
+
 pymysql.version_info = (1, 4, 13, "final", 0)
 pymysql.install_as_MySQLdb()
 
@@ -44,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #子应用注册到这个项目中
-    'book'#方案1
+    'book',   #方案1
+    'person'    #方案1
     # 'django.apps.config'
 ]
 
@@ -87,7 +90,7 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mysql', #数据库
+        'NAME': 'mysql', #数据库名
         'HOST': '127.0.0.1',#主机
         'PORT': 3306,
         'USER': 'root',
