@@ -44,7 +44,7 @@ def shop(request,city_id,shop_id):
     # < QueryDict: {'order': ['readcount', 'commentcount'], 'page': ['1']} >
     order=query_params.getlist('order')
     print(order)
-    return HttpResponse('杨姐的小饭店SHOP')
+    return HttpResponse('杨姐的小饭店SHOPaaaaa')
 
 
 #####################查询数据##################
